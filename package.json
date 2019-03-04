@@ -1,7 +1,7 @@
 {
-  "name": "<torque_child_theme_slug>",
+  "name": "torque-eleven33",
   "version": "1.0.0",
-  "description": "Torque child theme for <torque_child_theme_client_name>",
+  "description": "Torque child theme for Eleven33",
   "author": "Torque",
   "license": "ISC",
   "scripts": {

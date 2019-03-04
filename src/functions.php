@@ -1,40 +1,40 @@
 <?php
 
-require_once( get_stylesheet_directory() . '/includes/<torque_child_theme_slug>-nav-menus-class.php');
-require_once( get_stylesheet_directory() . '/includes/widgets/<torque_child_theme_slug>-widgets-class.php');
-require_once( get_stylesheet_directory() . '/includes/customizer/<torque_child_theme_slug>-customizer-class.php');
-require_once( get_stylesheet_directory() . '/includes/acf/<torque_child_theme_slug>-acf-class.php');
+require_once( get_stylesheet_directory() . '/includes/torque-eleven33-nav-menus-class.php');
+require_once( get_stylesheet_directory() . '/includes/widgets/torque-eleven33-widgets-class.php');
+require_once( get_stylesheet_directory() . '/includes/customizer/torque-eleven33-customizer-class.php');
+require_once( get_stylesheet_directory() . '/includes/acf/torque-eleven33-acf-class.php');
 
 /**
  * Child Theme Nav Menus
  */
 
- if ( class_exists( '<torque_child_theme_class_prefix>_Nav_Menus' ) ) {
-   new <torque_child_theme_class_prefix>_Nav_Menus();
+ if ( class_exists( 'E33_Nav_Menus' ) ) {
+   new E33_Nav_Menus();
  }
 
 /**
  * Child Theme Widgets
  */
 
-if ( class_exists( '<torque_child_theme_class_prefix>_Widgets' ) ) {
-  new <torque_child_theme_class_prefix>_Widgets();
+if ( class_exists( 'E33_Widgets' ) ) {
+  new E33_Widgets();
 }
 
 /**
  * Child Theme Customizer
  */
 
-if ( class_exists( '<torque_child_theme_class_prefix>_Customizer' ) ) {
-  new <torque_child_theme_class_prefix>_Customizer();
+if ( class_exists( 'E33_Customizer' ) ) {
+  new E33_Customizer();
 }
 
 /**
  * Child Theme ACF
  */
 
- if ( class_exists( '<torque_child_theme_class_prefix>_ACF' ) ) {
-   new <torque_child_theme_class_prefix>_ACF();
+ if ( class_exists( 'E33_ACF' ) ) {
+   new E33_ACF();
  }
 
 
@@ -81,7 +81,7 @@ function torque_enqueue_child_styles() {
     wp_enqueue_style( $parent_main_style, get_template_directory_uri() . '/bundles/main.css' );
 
     // enqueue child style
-    wp_enqueue_style( '<torque_child_theme_slug>-styles',
+    wp_enqueue_style( 'torque-eleven33-styles',
         get_stylesheet_directory_uri() . '/bundles/main.css',
         array( $parent_style, $parent_main_style ),
         wp_get_theme()->get('Version')
@@ -92,7 +92,7 @@ function torque_enqueue_child_styles() {
 add_action( 'wp_enqueue_scripts', 'torque_enqueue_child_scripts');
 function torque_enqueue_child_scripts() {
 
-    wp_enqueue_script( '<torque_child_theme_slug>-script',
+    wp_enqueue_script( 'torque-eleven33-script',
         get_stylesheet_directory_uri() . '/bundles/bundle.js',
         array( 'torque-theme-scripts' ), // depends on parent script
         wp_get_theme()->get('Version'),

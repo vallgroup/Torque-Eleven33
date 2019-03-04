@@ -11,15 +11,15 @@
 
 3. Find and replace the following in the entire directory: **Note:** do not use numbers or special characters
 
-   1. <torque_child_theme_name> (eg 905 Fulton)
-   2. <torque_child_theme_slug> (eg 905-fulton-child) **Note:** best practise is to include -child at the end
-   3. <torque_child_theme_class_prefix> (eg Fulton)
-   4. <torque_child_theme_uri> (eg https://github.com/vallgroup/Torque-Theme)
-   5. <torque_child_theme_client_name> (eg Fulton)
+   1. Torque Eleven33 (eg 905 Fulton)
+   2. torque-eleven33 (eg 905-fulton-child) **Note:** best practise is to include -child at the end
+   3. E33 (eg Fulton)
+   4. https://github.com/vallgroup/Torque-Theme (eg https://github.com/vallgroup/Torque-Theme)
+   5. Eleven33 (eg Fulton)
 
-4. Rename all files in this directory: {torque-child_theme}-etc-class.php => {<torque_child_theme_slug>}-etc-class.php
+4. Rename all files in this directory: {torque-child_theme}-etc-class.php => {torque-eleven33}-etc-class.php
 
-5. Add '<torque_child_theme_slug>' to cli/lib/workspaces.sh
+5. Add 'torque-eleven33' to cli/lib/workspaces.sh
 
 6. Open new terminal, and in **project** root, run:
 
