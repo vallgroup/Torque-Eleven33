@@ -38,6 +38,17 @@ if ( class_exists( 'E33_Customizer' ) ) {
  }
 
 
+/**
+* Floor Plan Plugin Settings
+*/
+
+if ( class_exists( 'Torque_Floor_Plans_Data_Source' ) ) {
+  add_filter(Torque_Floor_Plans_Data_Source::$DATA_SOURCE_FILTER_SLUG, function() { return 'entrata'; });
+
+  if ( class_exists( 'Torque_Floor_Plans_Entrata' ) ) {
+    add_filter(Torque_Floor_Plans_Entrata::$PROPERTY_ID_FILTER_SLUG, function() { return 673841; });
+  }
+}
 
 
 /**
