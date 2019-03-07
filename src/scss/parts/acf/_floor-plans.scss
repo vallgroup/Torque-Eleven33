@@ -1,0 +1,118 @@
+.torque-floor-plans {
+  .torque-floor-plans-header-wrapper {
+    padding: 67px $bodyPadding1;
+
+    background-color: $pale;
+
+    .search-bar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+
+      .search-bar-title {
+        margin-bottom: 25px;
+        width: 100%;
+
+        font-weight: bold;
+        text-align: center;
+      }
+
+      .unit-types {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin-bottom: 25px;
+        width: 100%;
+
+        @include respond-to(tablet) {
+          margin: 10px 0;
+          width: auto;
+        }
+
+        .unit-type {
+          display: flex;
+          align-items: center;
+          margin-bottom: 15px;
+          padding-right: 20px;
+          width: 150px;
+          box-sizing: border-box;
+
+          cursor: pointer;
+
+          @include respond-to(tablet) {
+            margin: 7px 0;
+          }
+
+          &::before {
+            content: "";
+            display: inline-block;
+
+            margin-right: 15px;
+            border: 2px solid $charcoal-grey;
+            height: 20px;
+            width: 20px;
+
+            transition: all 0.5s ease;
+          }
+
+          &.selected {
+            &::before {
+              background-color: $charcoal-grey;
+            }
+          }
+        }
+      }
+
+      button.search-button,
+      .date-picker-wrapper {
+        width: 100%;
+
+        @include respond-to(tablet) {
+          width: auto;
+        }
+      }
+
+      .date-picker-wrapper {
+        @extend %button;
+        @extend %dark-blue;
+
+        margin-bottom: 20px;
+
+        @include respond-to(tablet) {
+          margin-bottom: 0;
+          margin-right: 20px;
+        }
+
+        input {
+          background-color: transparent;
+          border: none;
+          width: 110px;
+
+          font: inherit;
+          outline: none;
+          transition: all 0.3s ease;
+
+          &::placeholder {
+            color: $charcoal-grey;
+            transition: all 0.3s ease;
+          }
+        }
+
+        &:hover {
+          input {
+            color: $white;
+
+            &::placeholder {
+              color: $white;
+            }
+          }
+        }
+
+        .react-datepicker__navigation {
+          min-width: 0;
+        }
+      }
+    }
+  }
+}

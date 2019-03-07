@@ -70,9 +70,10 @@ h4 {
 a {
 }
 
-button {
+%button {
   border: solid 2px $mustard;
   padding: 12px 20px;
+  height: 50px;
   box-sizing: border-box;
 
   font-family: $font_primary;
@@ -82,7 +83,7 @@ button {
   color: $mustard;
   background-color: transparent;
 
-  transition: all 0.5s ease;
+  transition: all 0.3s ease;
 
   @include respond-to(tablet) {
     min-width: 130px;
@@ -92,19 +93,35 @@ button {
     border-color: $white;
     color: $white;
   }
+}
+
+%blue {
+  border-color: $teal-blue;
+  color: $teal-blue;
+}
+
+%gray {
+  border-color: $beige;
+  color: $beige;
+}
+
+%dark-blue {
+  border-color: $charcoal-grey;
+  color: $charcoal-grey;
+}
+
+button {
+  @extend %button;
 
   &.blue {
-    border-color: $teal-blue;
-    color: $teal-blue;
+    @extend %blue;
   }
 
   &.gray {
-    border-color: $beige;
-    color: $beige;
+    @extend %gray;
   }
 
   &.dark-blue {
-    border-color: $charcoal-grey;
-    color: $charcoal-grey;
+    @extend %dark-blue;
   }
 }
