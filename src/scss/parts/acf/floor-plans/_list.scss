@@ -11,12 +11,20 @@
       color: $white;
       text-align: center;
 
+      @include respond-to(tablet) {
+        justify-content: flex-start;
+      }
+
       h4 {
         display: none;
       }
 
       .option {
         width: 100px;
+
+        @include respond-to(tablet) {
+          width: 33%;
+        }
 
         @include respond-to(desktop) {
           width: 100%;

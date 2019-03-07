@@ -4,5 +4,34 @@
       padding: 30px $bodyPadding1;
       box-sizing: border-box;
     }
+
+    .floor-plan-info {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      .floor-plan-info-block {
+        margin-bottom: 15px;
+        padding: 30px $bodyPadding2;
+        width: 100%;
+        box-sizing: border-box;
+
+        background-color: $charcoal-grey;
+        color: $white;
+
+        @include respond-to(tablet) {
+          padding: 30px 40px;
+          width: 32%;
+        }
+
+        @include respond-to(desktop) {
+          margin-bottom: 0px;
+        }
+
+        &.title {
+          font-weight: bold;
+        }
+      }
+    }
   }
 }

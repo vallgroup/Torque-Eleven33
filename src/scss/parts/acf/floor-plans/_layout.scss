@@ -5,22 +5,28 @@
 
     .torque-floor-plans-list {
       order: 2;
+
       width: 100%;
 
       @include respond-to(desktop) {
-        width: 30%;
         order: 1;
+
+        width: 30%;
       }
     }
 
     .torque-floor-plans-thumbnail {
       order: 1;
+
       width: 100%;
       height: auto;
 
       @include respond-to(desktop) {
-        width: 70%;
         order: 2;
+
+        padding-left: 1%;
+        width: 70%;
+        box-sizing: border-box;
       }
     }
   }
