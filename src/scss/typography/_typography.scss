@@ -3,24 +3,108 @@
 
 body {
   font-family: $font_primary;
+  font-size: 15px;
+  line-height: 1.4;
+  color: $charcoal-grey;
+
+  @include respond-to(tablet) {
+    font-size: 16px;
+    line-height: 1.56;
+  }
 }
 
 h1 {
   font-family: $font_secondary;
+  font-size: 24px;
+  line-height: 1.08;
+  color: $charcoal-grey;
+
+  @include respond-to(tablet) {
+    font-size: 48px;
+    line-height: 0.96;
+  }
+
+  @include respond-to(desktop) {
+    font-size: 64px;
+  }
 
   em {
     font-family: $font_script;
+    font-size: 72px;
+    color: $mustard;
+
+    @include respond-to(tablet) {
+      font-size: 144px;
+    }
+
+    @include respond-to(desktop) {
+      font-size: 200px;
+    }
   }
 }
 
 h2 {
+  font-family: $font_secondary;
+  font-size: 26px;
+  line-height: 1.04;
+  color: $charcoal-grey;
+
+  @include respond-to(tablet) {
+    font-size: 36px;
+  }
 }
 
 h3 {
+  font-family: $font_secondary;
+  font-size: 30px;
+  line-height: 1.07;
 }
 
 h4 {
+  font-family: $font_secondary;
+  font-size: 22px;
+  font-weight: 600;
+  color: $teal-blue;
 }
 
 a {
+}
+
+button {
+  border: solid 2px $mustard;
+  padding: 12px 20px;
+  box-sizing: border-box;
+
+  font-family: $font_primary;
+  font-size: 16px;
+  letter-spacing: 0.1px;
+  text-align: center;
+  color: $mustard;
+  background-color: transparent;
+
+  transition: all 0.5s ease;
+
+  @include respond-to(tablet) {
+    min-width: 130px;
+  }
+
+  &:hover {
+    border-color: $white;
+    color: $white;
+  }
+
+  &.blue {
+    border-color: $teal-blue;
+    color: $teal-blue;
+  }
+
+  &.gray {
+    border-color: $beige;
+    color: $beige;
+  }
+
+  &.dark-blue {
+    border-color: $charcoal-grey;
+    color: $charcoal-grey;
+  }
 }
