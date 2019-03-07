@@ -1,0 +1,40 @@
+.torque-floor-plans {
+  .torque-floor-plans-selector {
+    .torque-floor-plans-list {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 80px 7%;
+      box-sizing: border-box;
+
+      background-color: $charcoal-grey;
+      color: $white;
+      text-align: center;
+
+      h4 {
+        display: none;
+      }
+
+      .option {
+        width: 100px;
+
+        @include respond-to(desktop) {
+          width: 100%;
+        }
+
+        .floor {
+          display: none;
+        }
+
+        .title,
+        .rsf {
+          width: 100%;
+        }
+
+        .title {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}

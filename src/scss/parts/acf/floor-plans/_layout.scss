@@ -1,0 +1,27 @@
+.torque-floor-plans {
+  .torque-floor-plans-selector {
+    display: flex;
+    flex-wrap: wrap;
+
+    .torque-floor-plans-list {
+      order: 2;
+      width: 100%;
+
+      @include respond-to(desktop) {
+        width: 30%;
+        order: 1;
+      }
+    }
+
+    .torque-floor-plans-thumbnail {
+      order: 1;
+      width: 100%;
+      height: auto;
+
+      @include respond-to(desktop) {
+        width: 70%;
+        order: 2;
+      }
+    }
+  }
+}

@@ -1,8 +1,13 @@
 .torque-floor-plans {
   .torque-floor-plans-header-wrapper {
+    margin-bottom: 15px;
     padding: 67px $bodyPadding1;
 
     background-color: $pale;
+
+    @include respond-to(tablet) {
+      margin-bottom: 25px;
+    }
 
     .search-bar {
       display: flex;
