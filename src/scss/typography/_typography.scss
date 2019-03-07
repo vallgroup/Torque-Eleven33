@@ -2,9 +2,15 @@
 @import "../partials/variables";
 
 body {
+  font-family: $font_primary;
 }
 
 h1 {
+  font-family: $font_secondary;
+
+  em {
+    font-family: $font_script;
+  }
 }
 
 h2 {

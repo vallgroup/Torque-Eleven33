@@ -1,9 +1,24 @@
-/*
 @font-face {
-  font-family: Example;
-  src: url('../../statics/fonts/Example/Example.otf')
-    format('opentype');
+  font-family: JasmineScript;
+  src: url("../statics/fonts/JasmineScript.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
-*/
+
+@font-face {
+  font-family: VisbySlabCF;
+  src: url("../statics/fonts/Visby Slab CF/VisbySlabCF-DemiBold.otf")
+    format("opentype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: VisbySlabCF;
+  src: url("../statics/fonts/Visby Slab CF/VisbySlabCF-Regular.otf")
+    format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400");
