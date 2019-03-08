@@ -148,6 +148,92 @@ class E33_ACF {
       			'append' => '',
       			'maxlength' => '',
       		),
+      		array(
+      			'key' => 'field_5c829a53debdb',
+      			'label' => 'Management Logo',
+      			'name' => 'management_logo',
+      			'type' => 'image',
+      			'instructions' => '',
+      			'required' => 0,
+      			'conditional_logic' => 0,
+      			'wrapper' => array(
+      				'width' => '',
+      				'class' => '',
+      				'id' => '',
+      			),
+      			'return_format' => 'url',
+      			'preview_size' => 'thumbnail',
+      			'library' => 'all',
+      			'min_width' => '',
+      			'min_height' => '',
+      			'min_size' => '',
+      			'max_width' => '',
+      			'max_height' => '',
+      			'max_size' => '',
+      			'mime_types' => '',
+      		),
+      		array(
+      			'key' => 'field_5c829aafdebdc',
+      			'label' => 'Social',
+      			'name' => 'social',
+      			'type' => 'repeater',
+      			'instructions' => '',
+      			'required' => 0,
+      			'conditional_logic' => 0,
+      			'wrapper' => array(
+      				'width' => '',
+      				'class' => '',
+      				'id' => '',
+      			),
+      			'collapsed' => 'field_5c829abbdebdd',
+      			'min' => 0,
+      			'max' => 0,
+      			'layout' => 'row',
+      			'button_label' => '',
+      			'sub_fields' => array(
+      				array(
+      					'key' => 'field_5c829abbdebdd',
+      					'label' => 'Icon Slug',
+      					'name' => 'icon',
+      					'type' => 'text',
+      					'instructions' => 'Lowercase name of the social media platform, or more generally, of the icon to display.
+
+      Check possible icons here. https://fontawesome.bootstrapcheatsheets.com/
+
+      Note: If using a custom icon, emit the \'fa-\' at the start
+
+      eg \'facebook\' or \'facebook-official\' are both valid but not \'fa-facebook\'',
+      					'required' => 1,
+      					'conditional_logic' => 0,
+      					'wrapper' => array(
+      						'width' => '',
+      						'class' => '',
+      						'id' => '',
+      					),
+      					'default_value' => '',
+      					'placeholder' => 'facebook',
+      					'prepend' => '',
+      					'append' => '',
+      					'maxlength' => '',
+      				),
+      				array(
+      					'key' => 'field_5c829b29debde',
+      					'label' => 'Link',
+      					'name' => 'link',
+      					'type' => 'url',
+      					'instructions' => 'Link to your respective social media page',
+      					'required' => 1,
+      					'conditional_logic' => 0,
+      					'wrapper' => array(
+      						'width' => '',
+      						'class' => '',
+      						'id' => '',
+      					),
+      					'default_value' => '',
+      					'placeholder' => '',
+      				),
+      			),
+      		),
       	),
       	'location' => array(
       		array(
