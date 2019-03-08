@@ -19,18 +19,24 @@ header#header-style-1 {
     padding-right: $bodyPadding1;
     padding-left: $bodyPadding1;
 
+    @include respond-to(tablet) {
+      border-bottom: 6px solid $mustard;
+    }
+
     .torque-header-logo-wrapper {
       border-right: 3px solid $mustard;
       padding: 13px 30px 10px 0;
       box-sizing: border-box;
 
       @include respond-to(tablet) {
+        border-right: 6px solid $mustard;
         padding: 30px 45px 20px 0;
       }
     }
 
     .torque-header-burger-menu-wrapper {
       width: 100%;
+      cursor: pointer;
 
       @include respond-to(desktop) {
         display: none;
