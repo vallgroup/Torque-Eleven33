@@ -2,6 +2,11 @@ $headerHeightMobile: 56px;
 $headerHeightTablet: 110px;
 
 header#header-style-1 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
   height: $headerHeightMobile;
 
   background-color: $pale_85 !important;
