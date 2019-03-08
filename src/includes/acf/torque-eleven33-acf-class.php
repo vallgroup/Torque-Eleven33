@@ -234,6 +234,25 @@ class E33_ACF {
       				),
       			),
       		),
+      		array(
+      			'key' => 'field_5c82ad82c530b',
+      			'label' => 'Copyright Text',
+      			'name' => 'copyright_text',
+      			'type' => 'text',
+      			'instructions' => '',
+      			'required' => 0,
+      			'conditional_logic' => 0,
+      			'wrapper' => array(
+      				'width' => '',
+      				'class' => '',
+      				'id' => '',
+      			),
+      			'default_value' => '',
+      			'placeholder' => '',
+      			'prepend' => '',
+      			'append' => '',
+      			'maxlength' => '',
+      		),
       	),
       	'location' => array(
       		array(

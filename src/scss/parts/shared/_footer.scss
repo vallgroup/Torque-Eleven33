@@ -1,0 +1,95 @@
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  padding: 45px $bodyPadding2 55px;
+  box-sizing: border-box;
+
+  background-color: $charcoal-grey;
+
+  @include respond-to(tablet) {
+    padding: 70px $bodyPadding1 30px;
+  }
+
+  .logo-wrapper {
+    @include respond-to(desktop) {
+      padding-right: 3%;
+      width: 30%;
+    }
+
+    .torque-logo {
+      width: 100%;
+      max-width: 330px;
+    }
+  }
+
+  .blocks-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+
+    @include respond-to(desktop) {
+      width: 66%;
+    }
+  }
+
+  .footer-block {
+    margin-bottom: 35px;
+    width: 100%;
+    color: $white;
+    line-height: 1.8;
+
+    p {
+      margin: 0;
+    }
+
+    img {
+      max-width: 100%;
+    }
+
+    .footer-block-header {
+      font-weight: bold;
+    }
+
+    &.managed-by {
+      img {
+        width: 150px;
+      }
+    }
+
+    &:not(.footer-subscribe-form) {
+      @include respond-to(tablet) {
+        width: 50%;
+      }
+
+      @include respond-to(desktop) {
+        width: 33%;
+        min-width: 250px;
+      }
+    }
+  }
+
+  .footer-subscribe-form {
+    @include respond-to(desktop) {
+      display: none;
+    }
+
+    input,
+    button {
+      width: 100%;
+    }
+
+    button {
+      @include respond-to(tablet) {
+        width: auto;
+      }
+    }
+  }
+
+  .copyright-wrapper {
+    width: 100%;
+    font-size: 13px;
+    line-height: 1.92;
+    color: $white;
+  }
+}
