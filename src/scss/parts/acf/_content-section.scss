@@ -1,0 +1,72 @@
+.content-section {
+  position: relative;
+  padding: 70px $bodyPadding2 60px;
+
+  @include respond-to(tablet) {
+    padding-left: 30vw;
+  }
+
+  @include respond-to(desktop) {
+    padding: 90px 40vw 80px 23vw;
+  }
+
+  .content-wrapper {
+    position: relative;
+    z-index: 5;
+
+    h1 {
+      margin-right: -20px;
+      padding-left: 20px;
+
+      @include respond-to(tablet) {
+        margin-right: -60px;
+        padding-left: 0;
+      }
+
+      em {
+        display: block;
+        margin-left: -20px;
+
+        @include respond-to(tablet) {
+          margin-left: -120px;
+        }
+      }
+    }
+  }
+
+  .overlay {
+    .hero-three {
+      color: $pale;
+
+      &:not(.three-small) {
+        @include respond-to-max(tablet) {
+          font-size: 200vw;
+        }
+
+        @include respond-to(desktop) {
+          font-size: 130vw;
+          right: -30%;
+        }
+      }
+    }
+  }
+
+  &.right {
+    @include respond-to(desktop) {
+      padding: 90px 23vw 80px 40vw;
+
+      h1 {
+        margin-left: -17vw;
+      }
+    }
+  }
+
+  &.left {
+    @include respond-to(desktop) {
+      h1 {
+        margin-right: -30vw;
+        padding-left: 17vw;
+      }
+    }
+  }
+}

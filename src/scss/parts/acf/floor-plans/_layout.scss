@@ -1,4 +1,6 @@
 .torque-floor-plans {
+  margin-bottom: 30px;
+
   .torque-floor-plans-selector {
     display: flex;
     flex-wrap: wrap;
@@ -12,6 +14,7 @@
         order: 1;
 
         width: 30%;
+        max-width: 400px;
       }
     }
 
