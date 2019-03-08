@@ -1,22 +1,126 @@
+$headerHeightMobile: 56px;
+$headerHeightTablet: 110px;
+
 header#header-style-1 {
+  height: $headerHeightMobile;
+
+  background-color: $pale_85 !important;
+
+  @include respond-to(tablet) {
+    height: $headerHeightTablet;
+  }
+
   .torque-header-content-wrapper {
+    display: flex;
+    position: relative;
+    z-index: 10;
+    border-bottom: 3px solid $mustard;
+    padding: 0;
+    padding-right: $bodyPadding1;
+    padding-left: $bodyPadding1;
+
+    .torque-header-logo-wrapper {
+      border-right: 3px solid $mustard;
+      padding: 13px 30px 10px 0;
+      box-sizing: border-box;
+
+      @include respond-to(tablet) {
+        padding: 30px 45px 20px 0;
+      }
+    }
 
     .torque-header-burger-menu-wrapper {
+      width: 100%;
+
       @include respond-to(desktop) {
         display: none;
       }
     }
 
-    .torque-header-menu-items-inline-wrapper {
+    .header-links-wrapper {
+      width: 100%;
+
       @include respond-to-max(desktop) {
         display: none;
+      }
+
+      .top-links {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        height: 50%;
+      }
+
+      .torque-header-menu-items-inline-wrapper {
+        display: flex;
+        justify-content: flex-end;
+        text-align: right;
+        height: 50%;
+
+        .torque-menu-item {
+          padding-left: 10px;
+        }
       }
     }
   }
 
+  %mobilePadding {
+    margin-top: $headerHeightMobile;
+    padding-top: 30px;
+    padding-right: $bodyPadding2;
+    padding-left: $bodyPadding2;
+    padding-bottom: 35px;
+
+    @include respond-to(tablet) {
+      margin-top: $headerHeightTablet;
+      padding-top: 40px;
+      padding-right: $bodyPadding1;
+      padding-left: $bodyPadding1;
+    }
+  }
+
   .torque-header-menu-items-mobile {
+    @extend %mobilePadding;
+
+    right: 0;
+    left: unset;
+    max-width: 485px;
+    box-sizing: border-box;
+
+    background-color: $pale_85;
+    text-align: right;
+
     @include respond-to(desktop) {
       display: none;
+    }
+
+    .torque-menu-item-wrapper {
+      padding: 5px 0;
+      text-align: right;
+    }
+
+    .top-link {
+      padding: 10px 0;
+    }
+
+    &:not(.active) {
+      @extend %mobilePadding;
+    }
+  }
+
+  .torque-menu-item {
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  .top-link {
+    padding-left: 20px;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    &:not(.leasing) {
+      text-decoration: underline;
     }
   }
 }
