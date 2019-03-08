@@ -28,7 +28,147 @@ class E33_ACF {
   }
 
   public function acf_init() {
-    // add content sections here
+    if( function_exists('acf_add_local_field_group') ):
+
+      acf_add_local_field_group(array(
+      	'key' => 'group_5c81b2b34314e',
+      	'title' => 'Company Details',
+      	'fields' => array(
+      		array(
+      			'key' => 'field_5c81b2e97ac12',
+      			'label' => 'Leasing Office Hours',
+      			'name' => 'leasing_office_hours',
+      			'type' => 'textarea',
+      			'instructions' => '',
+      			'required' => 0,
+      			'conditional_logic' => 0,
+      			'wrapper' => array(
+      				'width' => '',
+      				'class' => '',
+      				'id' => '',
+      			),
+      			'default_value' => '',
+      			'placeholder' => '',
+      			'maxlength' => '',
+      			'rows' => 3,
+      			'new_lines' => 'wpautop',
+      		),
+      		array(
+      			'key' => 'field_5c81b31f7ac14',
+      			'label' => 'Management Office Hours',
+      			'name' => 'management_office_hours',
+      			'type' => 'textarea',
+      			'instructions' => '',
+      			'required' => 0,
+      			'conditional_logic' => 0,
+      			'wrapper' => array(
+      				'width' => '',
+      				'class' => '',
+      				'id' => '',
+      			),
+      			'default_value' => '',
+      			'placeholder' => '',
+      			'maxlength' => '',
+      			'rows' => 3,
+      			'new_lines' => 'wpautop',
+      		),
+      		array(
+      			'key' => 'field_5c81b3387ac15',
+      			'label' => 'Address',
+      			'name' => 'address',
+      			'type' => 'textarea',
+      			'instructions' => '',
+      			'required' => 0,
+      			'conditional_logic' => 0,
+      			'wrapper' => array(
+      				'width' => '',
+      				'class' => '',
+      				'id' => '',
+      			),
+      			'default_value' => '',
+      			'placeholder' => '',
+      			'maxlength' => '',
+      			'rows' => 4,
+      			'new_lines' => 'wpautop',
+      		),
+      		array(
+      			'key' => 'field_5c81b34e7ac16',
+      			'label' => 'Phone',
+      			'name' => 'phone',
+      			'type' => 'text',
+      			'instructions' => '',
+      			'required' => 0,
+      			'conditional_logic' => 0,
+      			'wrapper' => array(
+      				'width' => '',
+      				'class' => '',
+      				'id' => '',
+      			),
+      			'default_value' => '',
+      			'placeholder' => '',
+      			'prepend' => '',
+      			'append' => '',
+      			'maxlength' => '',
+      		),
+      		array(
+      			'key' => 'field_5c81b3787ac17',
+      			'label' => 'Leasing Phone Number',
+      			'name' => 'leasing_phone_number',
+      			'type' => 'text',
+      			'instructions' => '',
+      			'required' => 0,
+      			'conditional_logic' => 0,
+      			'wrapper' => array(
+      				'width' => '',
+      				'class' => '',
+      				'id' => '',
+      			),
+      			'default_value' => '',
+      			'placeholder' => '',
+      			'prepend' => '',
+      			'append' => '',
+      			'maxlength' => '',
+      		),
+      		array(
+      			'key' => 'field_5c81b38f7ac18',
+      			'label' => 'Website',
+      			'name' => 'website',
+      			'type' => 'text',
+      			'instructions' => '',
+      			'required' => 0,
+      			'conditional_logic' => 0,
+      			'wrapper' => array(
+      				'width' => '',
+      				'class' => '',
+      				'id' => '',
+      			),
+      			'default_value' => '',
+      			'placeholder' => '',
+      			'prepend' => '',
+      			'append' => '',
+      			'maxlength' => '',
+      		),
+      	),
+      	'location' => array(
+      		array(
+      			array(
+      				'param' => 'options_page',
+      				'operator' => '==',
+      				'value' => 'acf-options',
+      			),
+      		),
+      	),
+      	'menu_order' => 0,
+      	'position' => 'normal',
+      	'style' => 'default',
+      	'label_placement' => 'top',
+      	'instruction_placement' => 'label',
+      	'hide_on_screen' => '',
+      	'active' => 1,
+      	'description' => '',
+      ));
+
+      endif;
   }
 }
 
