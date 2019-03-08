@@ -273,6 +273,174 @@ class E33_ACF {
       	'description' => '',
       ));
 
+      acf_add_local_field_group(array(
+      	'key' => 'group_5c82b305f208d',
+      	'title' => 'Page Hero',
+      	'fields' => array(
+      		array(
+      			'key' => 'field_5c82b318cae8c',
+      			'label' => 'Type',
+      			'name' => 'hero_type',
+      			'type' => 'radio',
+      			'instructions' => '',
+      			'required' => 0,
+      			'conditional_logic' => 0,
+      			'wrapper' => array(
+      				'width' => '',
+      				'class' => '',
+      				'id' => '',
+      			),
+      			'choices' => array(
+              'none' => 'None',
+      				'image' => 'Image',
+      				'slideshow' => 'Slideshow',
+      			),
+      			'allow_null' => 0,
+      			'other_choice' => 0,
+      			'default_value' => 'image',
+      			'layout' => 'horizontal',
+      			'return_format' => 'value',
+      			'save_other_choice' => 0,
+      		),
+      		array(
+      			'key' => 'field_5c82b36acae8d',
+      			'label' => 'Image',
+      			'name' => 'hero_image',
+      			'type' => 'image',
+      			'instructions' => '',
+      			'required' => 1,
+      			'conditional_logic' => array(
+      				array(
+      					array(
+      						'field' => 'field_5c82b318cae8c',
+      						'operator' => '==',
+      						'value' => 'image',
+      					),
+      				),
+      			),
+      			'wrapper' => array(
+      				'width' => '',
+      				'class' => '',
+      				'id' => '',
+      			),
+      			'return_format' => 'url',
+      			'preview_size' => 'medium',
+      			'library' => 'all',
+      			'min_width' => '',
+      			'min_height' => '',
+      			'min_size' => '',
+      			'max_width' => '',
+      			'max_height' => '',
+      			'max_size' => '',
+      			'mime_types' => '',
+      		),
+      		array(
+      			'key' => 'field_5c82b384cae8e',
+      			'label' => 'Slideshow',
+      			'name' => 'hero_slideshow',
+      			'type' => 'text',
+      			'instructions' => 'Create a slideshow, then copy the \'shortcode\' into this field',
+      			'required' => 1,
+      			'conditional_logic' => array(
+      				array(
+      					array(
+      						'field' => 'field_5c82b318cae8c',
+      						'operator' => '==',
+      						'value' => 'slideshow',
+      					),
+      				),
+      			),
+      			'wrapper' => array(
+      				'width' => '',
+      				'class' => '',
+      				'id' => '',
+      			),
+      			'default_value' => '',
+      			'placeholder' => '',
+      			'prepend' => '',
+      			'append' => '',
+      			'maxlength' => '',
+      		),
+      		array(
+      			'key' => 'field_5c82b745cae8f',
+      			'label' => 'Overlay Type',
+      			'name' => 'hero_overlay_type',
+      			'type' => 'radio',
+      			'instructions' => '',
+      			'required' => 0,
+            'conditional_logic' => array(
+      				array(
+      					array(
+      						'field' => 'field_5c82b318cae8c',
+      						'operator' => '!=',
+      						'value' => 'none',
+      					),
+      				),
+      			),
+      			'wrapper' => array(
+      				'width' => '',
+      				'class' => '',
+      				'id' => '',
+      			),
+      			'choices' => array(
+      				'none' => 'None',
+      				'text' => 'Text',
+      				'default' => 'Default',
+      			),
+      			'allow_null' => 0,
+      			'other_choice' => 0,
+      			'default_value' => 'default',
+      			'layout' => 'horizontal',
+      			'return_format' => 'value',
+      			'save_other_choice' => 0,
+      		),
+      		array(
+      			'key' => 'field_5c82b79acae91',
+      			'label' => 'Text Overlay',
+      			'name' => 'hero_text_overlay',
+      			'type' => 'text',
+      			'instructions' => 'use \'em\' tags to add use cursive font',
+      			'required' => 0,
+      			'conditional_logic' => array(
+      				array(
+      					array(
+      						'field' => 'field_5c82b745cae8f',
+      						'operator' => '==',
+      						'value' => 'text',
+      					),
+      				),
+      			),
+      			'wrapper' => array(
+      				'width' => '',
+      				'class' => '',
+      				'id' => '',
+      			),
+      			'default_value' => '',
+      			'placeholder' => 'eg <em>Floor</em> Plans',
+      			'prepend' => '',
+      			'append' => '',
+      			'maxlength' => '',
+      		),
+      	),
+      	'location' => array(
+      		array(
+      			array(
+      				'param' => 'post_type',
+      				'operator' => '==',
+      				'value' => 'page',
+      			),
+      		),
+      	),
+      	'menu_order' => 0,
+      	'position' => 'normal',
+      	'style' => 'default',
+      	'label_placement' => 'top',
+      	'instruction_placement' => 'label',
+      	'hide_on_screen' => '',
+      	'active' => 1,
+      	'description' => '',
+      ));
+
       endif;
   }
 }
