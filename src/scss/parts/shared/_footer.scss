@@ -53,7 +53,8 @@ footer {
 
     &.managed-by {
       img {
-        width: 150px;
+        width: 100%;
+        max-width: 230px;
       }
     }
 
