@@ -25,6 +25,23 @@ if ( have_rows( $modules ) ):
         echo do_shortcode('[torque_floor_plans]');
 
         break;
+
+
+      case 'gallery_grid' :
+
+        $num_rows = get_sub_field( 'grid_rows' );
+
+        ?>
+        <div class="row gallery-module" >
+          <div class="gallery-grid-root grid-rows-<?php echo $num_rows; ?>" >
+        <?php
+          include locate_template('/parts/acf/modules/gallery-grid.php');
+        ?>
+          </div>
+        </div>
+        <?php
+
+        break;
     }
 
   endwhile;
