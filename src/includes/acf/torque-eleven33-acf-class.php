@@ -30,6 +30,10 @@ class E33_ACF {
   public function acf_init() {
     if( function_exists('acf_add_local_field_group') ):
 
+      /**
+       * Page Hero
+       */
+
       acf_add_local_field_group(array(
       	'key' => 'group_5c82b305f208d',
       	'title' => 'Page Hero',
@@ -198,6 +202,10 @@ class E33_ACF {
       	'description' => '',
       ));
 
+      /**
+       * Modules
+       */
+
       acf_add_local_field_group(array(
       	'key' => 'group_5c82dae5a1e8a',
       	'title' => 'Modules',
@@ -363,6 +371,56 @@ class E33_ACF {
       	'description' => '',
       ));
 
+      /**
+       * Specials bar
+       */
+
+      acf_add_local_field_group(array(
+      	'key' => 'group_5c869666ede06',
+      	'title' => 'Specials Bar',
+      	'fields' => array(
+      		array(
+      			'key' => 'field_5c86966c885dd',
+      			'label' => 'Text',
+      			'name' => 'text_specials_bar',
+      			'type' => 'text',
+      			'instructions' => 'Leave blank to hide specials bar',
+      			'required' => 0,
+      			'conditional_logic' => 0,
+      			'wrapper' => array(
+      				'width' => '',
+      				'class' => '',
+      				'id' => '',
+      			),
+      			'default_value' => '',
+      			'placeholder' => '',
+      			'prepend' => '',
+      			'append' => '',
+      			'maxlength' => '',
+      		),
+      	),
+      	'location' => array(
+      		array(
+      			array(
+      				'param' => 'options_page',
+      				'operator' => '==',
+      				'value' => 'acf-options',
+      			),
+      		),
+      	),
+      	'menu_order' => 0,
+      	'position' => 'normal',
+      	'style' => 'default',
+      	'label_placement' => 'top',
+      	'instruction_placement' => 'label',
+      	'hide_on_screen' => '',
+      	'active' => 1,
+      	'description' => '',
+      ));
+
+      /**
+       * Company Details
+       */
 
       acf_add_local_field_group(array(
       	'key' => 'group_5c81b2b34314e',
@@ -597,7 +655,7 @@ class E33_ACF {
       			),
       		),
       	),
-      	'menu_order' => 0,
+      	'menu_order' => 10,
       	'position' => 'normal',
       	'style' => 'default',
       	'label_placement' => 'top',

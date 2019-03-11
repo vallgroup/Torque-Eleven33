@@ -27,4 +27,6 @@
     <?php get_template_part( 'parts/shared/header-parts/menu-items/menu-items', 'stacked'); ?>
   </div>
 
+  <?php get_template_part( 'parts/shared/header-templates/header', 'specials-bar'); ?>
+
 </header>

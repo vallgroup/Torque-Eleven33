@@ -134,4 +134,19 @@ header#header-style-1 {
       text-decoration: underline;
     }
   }
+
+  .specials-bar {
+    padding: 2px $bodyPadding1 5px;
+
+    background-color: $mustard;
+    color: $white;
+    font-size: 11px;
+    line-height: 1.64;
+    letter-spacing: 0.6px;
+    text-align: center;
+
+    @include respond-to(desktop) {
+      padding: 0px $bodyPadding1 6px;
+    }
+  }
 }
