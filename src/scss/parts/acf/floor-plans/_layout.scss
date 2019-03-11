@@ -2,8 +2,13 @@
   margin-bottom: 30px;
 
   .torque-floor-plans-selector {
+    position: relative;
     display: flex;
     flex-wrap: wrap;
+
+    @include respond-to(desktop) {
+      justify-content: flex-end;
+    }
 
     .torque-floor-plans-list {
       order: 2;
@@ -11,8 +16,11 @@
       width: 100%;
 
       @include respond-to(desktop) {
-        order: 1;
-
+        overflow-y: auto;
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
         width: 30%;
         max-width: 400px;
       }
