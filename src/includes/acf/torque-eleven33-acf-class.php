@@ -376,7 +376,7 @@ class E33_ACF {
        							'label' => 'Images',
        							'name' => 'images',
        							'type' => 'repeater',
-       							'instructions' => '',
+       							'instructions' => 'Picture a grid with 12 columns and 2 rows. The grid lines between the columns (including the first and last one) can be labelled from 0 to 13, and between the rows from 0 to 2. For each image, you can define the area in this grid that it lives in by giving a column line start/finish and a row line start/finish',
        							'required' => 0,
        							'conditional_logic' => 0,
        							'wrapper' => array(
@@ -403,7 +403,7 @@ class E33_ACF {
        										'class' => '',
        										'id' => '',
        									),
-       									'return_format' => 'url',
+       									'return_format' => 'array',
        									'preview_size' => 'thumbnail',
        									'library' => 'all',
        									'min_width' => '',

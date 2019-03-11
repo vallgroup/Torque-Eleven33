@@ -2,7 +2,11 @@
 if( have_rows('images') ) {
   while( have_rows('images') ) { the_row();
 
-    $src = get_sub_field('image');
+    $image = get_sub_field('image');
+
+    $caption = $image['caption'];
+    $src = $image['url'];
+
     $col_start = get_sub_field('column_start');
     $col_end = get_sub_field('column_end');
     $row_start = get_sub_field('row_start');
@@ -12,13 +16,21 @@ if( have_rows('images') ) {
 
     ?>
 
-    <img class="
+    <div class="
       grid-image
       grid-column-<?php echo $col_start; ?>-<?php echo $width; ?>
       grid-row-<?php echo $row_start; ?>-<?php echo $height; ?>
       grid-width-<?php echo $width; ?>
       grid-height-<?php echo $height; ?>
-    " src="<?php echo $src; ?>" />
+    ">
+      <img src="<?php echo $src; ?>" />
+
+      <?php if ($caption) { ?>
+        <div class="caption-overlay">
+          <?php echo $caption; ?>
+        </div>
+      <?php } ?>
+    </div>
 
     <?php
   }

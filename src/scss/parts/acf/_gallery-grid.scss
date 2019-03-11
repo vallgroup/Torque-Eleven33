@@ -3,8 +3,41 @@
 .gallery-module {
   .gallery-grid-root {
     .grid-image {
+      position: relative;
       width: 100%;
       height: auto;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+
+      .caption-overlay {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 30px;
+
+        background-color: $charcoal-grey_65;
+        color: $white;
+
+        transition: all 0.3s ease;
+        opacity: 0;
+      }
+
+      &:hover {
+        .caption-overlay {
+          opacity: 1;
+        }
+      }
     }
 
     /*
@@ -13,16 +46,14 @@
 
     @include respond-to(tablet) {
       @include respond-to-max(desktop) {
-        margin: 0 -2vw;
+        margin: 0 -1vw;
         display: flex;
         flex-wrap: wrap;
 
         .grid-image {
-          margin: 2vw;
+          margin: 1vw;
           width: auto;
           height: 400px;
-          object-fit: cover;
-          object-position: center;
 
           @for $i from 1 through 12 {
             $width: ($i / 12) * 100 + %;
@@ -52,10 +83,6 @@
       }
 
       .grid-image {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-
         @for $i from 0 through 11 {
           // possible col start value
           $start: $i + 1;
