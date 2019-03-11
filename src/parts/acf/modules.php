@@ -42,6 +42,15 @@ if ( have_rows( $modules ) ):
         <?php
 
         break;
+
+      case 'list_blocks' :
+
+        $title = get_sub_field( 'title' );
+        $description = get_sub_field( 'description' );
+
+        include locate_template('/parts/acf/modules/list-blocks.php');
+
+        break;
     }
 
   endwhile;

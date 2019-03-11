@@ -2,10 +2,6 @@
   position: relative;
   padding: 70px $bodyPadding2 60px;
 
-  @include respond-to(tablet) {
-    padding-left: 30vw;
-  }
-
   @include respond-to(desktop) {
     padding: 20px 40vw 40px 23vw;
   }
@@ -20,7 +16,10 @@
 
       @include respond-to(tablet) {
         margin-right: -60px;
-        padding-left: 0;
+      }
+
+      @include respond-to(desktop) {
+        padding-left: 0px;
       }
 
       em {
@@ -28,7 +27,11 @@
         margin-left: -20px;
 
         @include respond-to(tablet) {
-          margin-left: -120px;
+          margin-left: -40px;
+        }
+
+        @include respond-to(desktop) {
+          margin-left: -150px;
         }
       }
     }

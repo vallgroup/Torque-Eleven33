@@ -1,0 +1,44 @@
+.list-blocks-section {
+  padding: 20px $bodyPadding2 50px;
+
+  @include respond-to(desktop) {
+    padding: 20px $bodyPadding1 40px 23vw;
+  }
+
+  h2 {
+    margin-top: 0;
+  }
+
+  .list-blocks-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .list-block {
+      width: 100%;
+
+      @include respond-to(tablet) {
+        width: 49%;
+      }
+
+      @include respond-to(desktop) {
+        width: 32%;
+      }
+
+      .list-block-item:not(:last-child) {
+        position: relative;
+        margin-bottom: 9px;
+
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: -5px;
+          left: 0;
+          width: 75px;
+          height: 1px;
+          background-color: $charcoal-grey_65;
+        }
+      }
+    }
+  }
+}
