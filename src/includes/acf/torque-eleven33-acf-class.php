@@ -376,7 +376,7 @@ class E33_ACF {
        							'label' => 'Images',
        							'name' => 'images',
        							'type' => 'repeater',
-       							'instructions' => 'Picture a grid with 12 columns and 2 rows. The grid lines between the columns (including the first and last one) can be labelled from 0 to 13, and between the rows from 0 to 2. For each image, you can define the area in this grid that it lives in by giving a column line start/finish and a row line start/finish',
+       							'instructions' => "Picture a grid with 12 columns and 2 rows. </br>The grid lines between the columns (including the first and last one) can be labelled from 0 to 13, and between the rows from 0 to 2. </br>For each image, you can define the area in this grid that it will live in (on desktop) by giving it a column line start/finish and a row line start/finish. </br></br> The order you add the images will have no effect on desktop (since we're just giving it a grid area), but will be relevant for mobile and tablet.",
        							'required' => 0,
        							'conditional_logic' => 0,
        							'wrapper' => array(
