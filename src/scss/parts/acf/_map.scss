@@ -1,0 +1,100 @@
+.torque-map {
+  padding: 10px 0 50px;
+
+  @include respond-to(tablet) {
+    padding: 10px $bodyPadding2 85px;
+  }
+
+  .torque-map-pois {
+    @include respond-to-max(tablet) {
+      padding: 0 $bodyPadding2 40px;
+    }
+
+    @include respond-to(tablet) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    @include respond-to(desktop) {
+      justify-content: space-evenly;
+    }
+
+    .torque-map-poi {
+      margin-bottom: 20px;
+      width: 100%;
+
+      @include respond-to(tablet) {
+        width: 48%;
+      }
+
+      @include respond-to(desktop) {
+        width: 190px;
+      }
+
+      button {
+        width: 100%;
+      }
+
+      &:nth-child(4n + 1) {
+        button {
+          @extend %dark-blue;
+        }
+      }
+
+      &:nth-child(4n + 3) {
+        button {
+          @extend %blue;
+        }
+      }
+
+      &:nth-child(4n) {
+        button {
+          @extend %gray;
+        }
+      }
+    }
+  }
+
+  .torque-map-container {
+    margin-bottom: 60px;
+  }
+
+  .torque-map-pois-list {
+    @include respond-to-max(tablet) {
+      padding: 0 $bodyPadding2;
+    }
+
+    @include respond-to(tablet) {
+      padding: 0 5vw;
+    }
+
+    @include respond-to(desktop) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 0;
+    }
+
+    .torque-map-pois-list-item {
+      margin-bottom: 5px;
+
+      @include respond-to(tablet) {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      @include respond-to(desktop) {
+        width: 45%;
+      }
+
+      .torque-map-pois-list-item-distance {
+        flex-shrink: 0;
+
+        @include respond-to(tablet) {
+          padding-left: 20px;
+        }
+      }
+    }
+  }
+}

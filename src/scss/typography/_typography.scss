@@ -91,7 +91,7 @@ a {
   }
 
   &:hover {
-    border-color: $white;
+    background-color: $mustard;
     color: $white;
   }
 }
@@ -99,16 +99,31 @@ a {
 %blue {
   border-color: $teal-blue;
   color: $teal-blue;
+
+  &:hover {
+    background-color: $teal-blue;
+    color: $white;
+  }
 }
 
 %gray {
   border-color: $beige;
   color: $beige;
+
+  &:hover {
+    background-color: $beige;
+    color: $white;
+  }
 }
 
 %dark-blue {
   border-color: $charcoal-grey;
   color: $charcoal-grey;
+
+  &:hover {
+    background-color: $charcoal-grey;
+    color: $white;
+  }
 }
 
 button {
