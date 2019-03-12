@@ -26,6 +26,14 @@ if ( have_rows( $modules ) ):
 
         break;
 
+      case 'map' :
+
+        $map_id = get_sub_field('map_id');
+
+        echo do_shortcode('[torque_map map_id="'.$map_id.'"]');
+
+        break;
+
 
       case 'gallery_grid' :
 

@@ -50,6 +50,18 @@ if ( class_exists( 'Torque_Floor_Plans_Data_Source' ) ) {
   }
 }
 
+/**
+ * Map Settings
+ */
+if ( class_exists( 'Torque_Map_CPT' ) ) {
+  add_filter( Torque_Map_CPT::$POIS_ALLOWED_FILTER , function() { return 4; });
+}
+if ( class_exists( 'Torque_Map_Controller' ) ) {
+  add_filter( Torque_Map_Controller::$DISPLAY_POIS_FILTER , function() { return true; });
+  add_filter( Torque_Map_Controller::$POIS_LOCATION , function() { return 'top'; });
+  add_filter( Torque_Map_Controller::$API_KEY_FILTER , function() { return get_field( 'google_maps', 'option' ); });
+}
+
 
 /**
  * Admin settings
