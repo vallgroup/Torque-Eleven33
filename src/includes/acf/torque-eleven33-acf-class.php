@@ -28,6 +28,24 @@ class E33_ACF {
   }
 
   public function acf_init() {
+    if( function_exists('acf_add_options_page') ) {
+      acf_add_options_page( array(
+        /* (string) The title displayed on the options page. Required. */
+      	'page_title' => 'API Keys',
+      	/* (string) The URL slug used to uniquely identify this options page.
+      	Defaults to a url friendly version of menu_title */
+      	'menu_slug' => 'api-keys',
+      	/* (boolean)  Whether to load the option (values saved from this options page) when WordPress starts up.
+      	Defaults to false. Added in v5.2.8. */
+      	'autoload' => true,
+      	/* (string) The update button text. Added in v5.3.7. */
+      	'update_button'		=> __('Update', 'acf'),
+      	/* (string) The message shown above the form on submit. Added in v5.6.0. */
+      	'updated_message'	=> __("API Keys Updated", 'acf'),
+      ) );
+    }
+
+
     if( function_exists('acf_add_local_field_group') ):
 
       /**
@@ -700,6 +718,53 @@ class E33_ACF {
       	'active' => 1,
       	'description' => '',
       ));
+
+      /*
+        API Keys
+       */
+
+       acf_add_local_field_group(array(
+       	'key' => 'group_5c881c2e4ca15',
+       	'title' => 'API Keys',
+       	'fields' => array(
+       		array(
+       			'key' => 'field_5c881c3550e7f',
+       			'label' => 'Google Maps',
+       			'name' => 'google_maps',
+       			'type' => 'text',
+       			'instructions' => '',
+       			'required' => 0,
+       			'conditional_logic' => 0,
+       			'wrapper' => array(
+       				'width' => '',
+       				'class' => '',
+       				'id' => '',
+       			),
+       			'default_value' => '',
+       			'placeholder' => '',
+       			'prepend' => '',
+       			'append' => '',
+       			'maxlength' => '',
+       		),
+       	),
+       	'location' => array(
+       		array(
+       			array(
+       				'param' => 'options_page',
+       				'operator' => '==',
+       				'value' => 'api-keys',
+       			),
+       		),
+       	),
+       	'menu_order' => 0,
+       	'position' => 'normal',
+       	'style' => 'default',
+       	'label_placement' => 'top',
+       	'instruction_placement' => 'label',
+       	'hide_on_screen' => '',
+       	'active' => 1,
+       	'description' => '',
+       ));
 
       /**
        * Company Details
