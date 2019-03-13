@@ -72,6 +72,13 @@ if ( class_exists( 'Torque_Map_Controller' ) ) {
   add_filter( Torque_Map_Controller::$API_KEY_FILTER , function() { return get_field( 'google_maps', 'option' ); });
 }
 
+/**
+ * Filtered Loop Settings
+ */
+
+ if ( class_exists( 'Torque_Filtered_Loop_Shortcode' ) ) {
+   add_filter( Torque_Filtered_Loop_Shortcode::$LOOP_TEMPLATE_FILTER_HANDLE , function() { return 1; });
+ }
 
 /**
  * Admin settings

@@ -1,0 +1,80 @@
+.torque-filtered-loop {
+  padding: 10px $bodyPadding2 70px;
+
+  @include respond-to(desktop) {
+    padding: 20px $bodyPadding1 40px;
+  }
+
+  .torque-filtered-loop-filters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    @include respond-to(desktop) {
+      justify-content: center;
+    }
+
+    button {
+      margin-bottom: 35px;
+      width: 100%;
+
+      @include respond-to(tablet) {
+        width: 48%;
+      }
+
+      @include respond-to(desktop) {
+        margin: 0 10px 35px;
+        width: 170px;
+      }
+    }
+  }
+
+  .loop-post {
+    padding-bottom: 40px;
+    border-bottom: 1px solid $charcoal-grey;
+    margin-bottom: 50px;
+
+    @include respond-to(desktop) {
+      display: flex;
+      align-items: flex-end;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+      border-bottom: 0;
+    }
+
+    .featured-image {
+      width: 100%;
+      height: 40vw;
+      background-color: $pale;
+      background-size: cover;
+      background-repeat: no-repeat;
+
+      @include respond-to(tablet) {
+        width: 250px;
+        height: 150px;
+      }
+
+      @include respond-to(desktop) {
+        margin-right: 120px;
+      }
+    }
+
+    .post-terms-wrapper {
+      display: none;
+    }
+
+    h4 {
+      margin-bottom: 5px;
+
+      @include respond-to(desktop) {
+        margin-top: 0;
+      }
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
