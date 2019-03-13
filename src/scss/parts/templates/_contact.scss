@@ -15,6 +15,16 @@
     width: 100%;
   }
 
+  h3 {
+    font-size: 18px;
+    line-height: 1.04;
+    font-weight: normal;
+
+    @include respond-to(tablet) {
+      font-size: 36px;
+    }
+  }
+
   [id^="contact-form-"] {
     @include respond-to(desktop) {
       width: 60%;

@@ -46,6 +46,8 @@ class E33_ACF {
     }
 
 
+
+
     if( function_exists('acf_add_local_field_group') ):
 
       /**
@@ -1043,6 +1045,93 @@ class E33_ACF {
       		),
       	),
       	'menu_order' => 10,
+      	'position' => 'normal',
+      	'style' => 'default',
+      	'label_placement' => 'top',
+      	'instruction_placement' => 'label',
+      	'hide_on_screen' => '',
+      	'active' => 1,
+      	'description' => '',
+      ));
+
+      /*
+      Floor Plans
+       */
+
+      acf_add_local_field_group(array(
+      	'key' => 'group_5c89920428c90',
+      	'title' => 'Floor Plans',
+      	'fields' => array(
+      		array(
+      			'key' => 'field_5c89920c4b04d',
+      			'label' => 'Unit Type Name Mappings',
+      			'name' => 'unit_type_name_mappings',
+      			'type' => 'repeater',
+      			'instructions' => '',
+      			'required' => 0,
+      			'conditional_logic' => 0,
+      			'wrapper' => array(
+      				'width' => '',
+      				'class' => '',
+      				'id' => '',
+      			),
+      			'collapsed' => '',
+      			'min' => 0,
+      			'max' => 0,
+      			'layout' => 'table',
+      			'button_label' => '',
+      			'sub_fields' => array(
+      				array(
+      					'key' => 'field_5c8992184b04e',
+      					'label' => 'From',
+      					'name' => 'from',
+      					'type' => 'text',
+      					'instructions' => '',
+      					'required' => 1,
+      					'conditional_logic' => 0,
+      					'wrapper' => array(
+      						'width' => '',
+      						'class' => '',
+      						'id' => '',
+      					),
+      					'default_value' => '',
+      					'placeholder' => 'STU 1 BA',
+      					'prepend' => '',
+      					'append' => '',
+      					'maxlength' => '',
+      				),
+      				array(
+      					'key' => 'field_5c8992314b04f',
+      					'label' => 'To',
+      					'name' => 'to',
+      					'type' => 'text',
+      					'instructions' => '',
+      					'required' => 1,
+      					'conditional_logic' => 0,
+      					'wrapper' => array(
+      						'width' => '',
+      						'class' => '',
+      						'id' => '',
+      					),
+      					'default_value' => '',
+      					'placeholder' => 'Studio',
+      					'prepend' => '',
+      					'append' => '',
+      					'maxlength' => '',
+      				),
+      			),
+      		),
+      	),
+      	'location' => array(
+      		array(
+      			array(
+      				'param' => 'options_page',
+      				'operator' => '==',
+      				'value' => 'acf-options',
+      			),
+      		),
+      	),
+      	'menu_order' => 2,
       	'position' => 'normal',
       	'style' => 'default',
       	'label_placement' => 'top',

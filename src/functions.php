@@ -58,6 +58,21 @@ if ( class_exists( 'Torque_Floor_Plans_Data_Source' ) ) {
   if ( class_exists( 'Torque_Floor_Plans_Entrata' ) ) {
     add_filter(Torque_Floor_Plans_Entrata::$PROPERTY_ID_FILTER_SLUG, function() { return 673841; });
   }
+
+  if ( class_exists( 'Entrata_API') ) {
+    add_filter( Entrata_API::$UNIT_TYPE_NAME_FILTER_HANDLE, function($unit_type_name) {
+      $name_mappings = get_field('unit_type_name_mappings', 'option');
+      if (!$name_mappings) { return $unit_type_name; }
+
+      foreach ($name_mappings as $mapping) {
+        if ($mapping['from'] === $unit_type_name) {
+          return $mapping['to'];
+        }
+      }
+
+      return $unit_type_name;
+    });
+  }
 }
 
 /**
