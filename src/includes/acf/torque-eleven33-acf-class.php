@@ -242,6 +242,16 @@ class E33_ACF {
        				'id' => '',
        			),
        			'layouts' => array(
+              'layout_5c884257a6edc' => array(
+      					'key' => 'layout_5c884257a6edc',
+      					'name' => 'deals',
+      					'label' => 'Deals',
+      					'display' => 'block',
+      					'sub_fields' => array(
+      					),
+      					'min' => '',
+      					'max' => '',
+      				),
        				'5c82db52e74ba' => array(
        					'key' => '5c82db52e74ba',
        					'name' => 'content_section',

@@ -20,6 +20,12 @@ if ( have_rows( $modules ) ):
 
         break;
 
+      case 'deals' :
+
+        echo do_shortcode('[torque_filtered_loop post_type="torque_deal" tax="category_deal"]');
+
+        break;
+
       case 'floor_plans' :
 
         echo do_shortcode('[torque_floor_plans]');
