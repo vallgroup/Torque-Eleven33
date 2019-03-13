@@ -142,10 +142,17 @@ button {
   }
 }
 
-input {
+%input_styles {
   margin-bottom: 10px;
-  border: none;
+  border: solid 1px $pale;
   padding: 15px;
   width: 100%;
   box-sizing: border-box;
+
+  background-color: $white;
+}
+
+input,
+textarea {
+  @extend %input_styles;
 }

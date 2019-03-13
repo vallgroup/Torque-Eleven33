@@ -1,0 +1,69 @@
+.content-contact {
+  padding: 60px $bodyPadding2 45px;
+
+  @include respond-to(desktop) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  p {
+    width: 100%;
+  }
+
+  [id^="contact-form-"] {
+    @include respond-to(desktop) {
+      width: 60%;
+    }
+
+    .contact-form {
+      margin-top: 20px;
+      padding-bottom: 45px;
+
+      @include respond-to(desktop) {
+        margin-top: 0px;
+      }
+
+      label {
+        display: none;
+      }
+
+      input,
+      input[type="text"],
+      input[type="email"],
+      input[type="url"],
+      textarea {
+        @extend %input_styles;
+
+        max-width: none;
+      }
+    }
+  }
+
+  .contact-blocks {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    @include respond-to(desktop) {
+      width: 35%;
+    }
+
+    .footer-block {
+      margin-bottom: 20px;
+      width: 100%;
+
+      @include respond-to(tablet) {
+        width: 48%;
+      }
+
+      @include respond-to(desktop) {
+        width: 100%;
+      }
+    }
+  }
+}

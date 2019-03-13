@@ -1,8 +1,5 @@
 <?php
 
-$leasing_office_hours = get_field('leasing_office_hours', 'options');
-$management_office_hours = get_field('management_office_hours', 'options');
-$address = get_field('address', 'options');
 $phone = get_field('phone', 'options');
 $website = get_field('website', 'options');
 $management_logo = get_field('management_logo', 'options');
@@ -28,35 +25,9 @@ $copyright = get_field('copyright_text', 'options');
       <button>Submit</button>
     </div>
 
-    <?php if ($leasing_office_hours) { ?>
-      <div class="footer-block leasing-hours">
-        <div class="footer-block-header">
-          Leasing Office Hours
-        </div>
+    <?php get_template_part('parts/shared/office-hours'); ?>
 
-        <?php echo $leasing_office_hours; ?>
-      </div>
-    <?php } ?>
-
-    <?php if ($management_office_hours) { ?>
-      <div class="footer-block management-hours">
-        <div class="footer-block-header">
-          Management Office Hours
-        </div>
-
-        <?php echo $management_office_hours; ?>
-      </div>
-    <?php } ?>
-
-    <?php if ($address) { ?>
-      <div class="footer-block address">
-        <div class="footer-block-header">
-          Address
-        </div>
-
-        <?php echo $address; ?>
-      </div>
-    <?php } ?>
+    <?php get_template_part('parts/shared/address'); ?>
 
     <?php if ($phone || $website) { ?>
       <div class="footer-block phone-number">
