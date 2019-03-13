@@ -4,6 +4,7 @@ require_once( get_stylesheet_directory() . '/includes/torque-eleven33-nav-menus-
 require_once( get_stylesheet_directory() . '/includes/widgets/torque-eleven33-widgets-class.php');
 require_once( get_stylesheet_directory() . '/includes/customizer/torque-eleven33-customizer-class.php');
 require_once( get_stylesheet_directory() . '/includes/acf/torque-eleven33-acf-class.php');
+require_once( get_stylesheet_directory() . '/includes/torque-deals-cpt-class.php');
 
 /**
  * Child Theme Nav Menus
@@ -36,6 +37,15 @@ if ( class_exists( 'E33_Customizer' ) ) {
  if ( class_exists( 'E33_ACF' ) ) {
    new E33_ACF();
  }
+
+
+ /**
+  * Deals CPT
+  */
+
+  if ( class_exists( 'Torque_Deals_CPT' ) ) {
+    new Torque_Deals_CPT();
+  }
 
 
 /**
