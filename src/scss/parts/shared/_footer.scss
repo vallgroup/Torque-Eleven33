@@ -13,6 +13,8 @@ footer {
   }
 
   .logo-wrapper {
+    margin-bottom: 20px;
+
     @include respond-to(desktop) {
       padding-right: 3%;
       width: 30%;
@@ -27,8 +29,10 @@ footer {
   .blocks-wrapper {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
 
     @include respond-to(desktop) {
+      justify-content: flex-end;
       width: 66%;
     }
   }
@@ -60,11 +64,11 @@ footer {
 
     &:not(.footer-subscribe-form) {
       @include respond-to(tablet) {
-        width: 50%;
+        width: 48%;
       }
 
       @include respond-to(desktop) {
-        width: 33%;
+        width: 32%;
         min-width: 250px;
       }
     }
@@ -92,5 +96,25 @@ footer {
     font-size: 13px;
     line-height: 1.92;
     color: $white;
+
+    .accessibility-logos-wrapper {
+      .accessibility-logo {
+        margin-right: 10px;
+        width: 30px;
+        height: 30px;
+        object-fit: contain;
+        object-position: center;
+      }
+    }
+
+    .legal-link {
+      display: block;
+      text-decoration: underline;
+
+      @include respond-to(desktop) {
+        display: inline-block;
+        margin-left: 50px;
+      }
+    }
   }
 }
