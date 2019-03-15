@@ -71,6 +71,11 @@ h4 {
 a {
 }
 
+%button_fill {
+  background-color: $mustard;
+  color: $white;
+}
+
 %button {
   border: solid 2px $mustard;
   padding: 12px 20px;
@@ -91,9 +96,13 @@ a {
   }
 
   &:hover {
-    background-color: $mustard;
-    color: $white;
+    @extend %button_fill;
   }
+}
+
+%blue_fill {
+  background-color: $teal-blue;
+  color: $white;
 }
 
 %blue {
@@ -101,9 +110,13 @@ a {
   color: $teal-blue;
 
   &:hover {
-    background-color: $teal-blue;
-    color: $white;
+    @extend %blue_fill;
   }
+}
+
+%gray_fill {
+  background-color: $beige;
+  color: $white;
 }
 
 %gray {
@@ -111,9 +124,13 @@ a {
   color: $beige;
 
   &:hover {
-    background-color: $beige;
-    color: $white;
+    @extend %gray_fill;
   }
+}
+
+%dark-blue_fill {
+  background-color: $charcoal-grey;
+  color: $white;
 }
 
 %dark-blue {
@@ -121,8 +138,21 @@ a {
   color: $charcoal-grey;
 
   &:hover {
-    background-color: $charcoal-grey;
-    color: $white;
+    @extend %dark-blue_fill;
+  }
+}
+
+%orange_fill {
+  background-color: $orange;
+  color: $white;
+}
+
+%orange {
+  border-color: $orange;
+  color: $orange;
+
+  &:hover {
+    @extend %orange_fill;
   }
 }
 
@@ -139,6 +169,10 @@ button {
 
   &.dark-blue {
     @extend %dark-blue;
+  }
+
+  &.orange {
+    @extend %orange;
   }
 }
 

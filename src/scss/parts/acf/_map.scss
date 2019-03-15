@@ -36,9 +36,21 @@
         width: 100%;
       }
 
+      &.active {
+        button {
+          @extend %button_fill;
+        }
+      }
+
       &:nth-child(4n + 1) {
         button {
           @extend %dark-blue;
+        }
+
+        &.active {
+          button {
+            @extend %dark-blue_fill;
+          }
         }
       }
 
@@ -46,11 +58,23 @@
         button {
           @extend %blue;
         }
+
+        &.active {
+          button {
+            @extend %blue_fill;
+          }
+        }
       }
 
       &:nth-child(4n) {
         button {
-          @extend %gray;
+          @extend %orange;
+        }
+
+        &.active {
+          button {
+            @extend %orange_fill;
+          }
         }
       }
     }
