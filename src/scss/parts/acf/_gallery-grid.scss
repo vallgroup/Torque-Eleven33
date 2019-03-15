@@ -113,4 +113,15 @@
       }
     }
   }
+
+  // adjacent galleries should still have gap
+  & + .gallery-module {
+    @include respond-to(tablet) {
+      margin-top: 1vw;
+    }
+
+    @include respond-to(desktop) {
+      margin-top: 25px;
+    }
+  }
 }
