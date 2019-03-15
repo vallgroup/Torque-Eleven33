@@ -37,23 +37,6 @@
     }
   }
 
-  .overlay {
-    .hero-three {
-      color: $pale;
-
-      &:not(.three-small) {
-        @include respond-to-max(tablet) {
-          font-size: 200vw;
-        }
-
-        @include respond-to(desktop) {
-          font-size: 130vw;
-          right: -30%;
-        }
-      }
-    }
-  }
-
   &.right {
     @include respond-to(desktop) {
       padding: 90px 23vw 80px 40vw;
