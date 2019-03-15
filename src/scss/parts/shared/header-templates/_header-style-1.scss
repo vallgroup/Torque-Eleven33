@@ -37,6 +37,10 @@ header#header-style-1 {
         border-right: 6px solid $mustard;
         padding: 30px 45px 20px 0;
       }
+
+      div {
+        width: 200px;
+      }
     }
 
     .torque-header-burger-menu-wrapper {
@@ -141,9 +145,13 @@ header#header-style-1 {
     background-color: $mustard;
     color: $white;
     font-size: 11px;
-    line-height: 1.64;
+    line-height: 1.3;
     letter-spacing: 0.6px;
     text-align: center;
+
+    @include respond-to(tablet) {
+      font-size: 16px;
+    }
 
     @include respond-to(desktop) {
       padding: 0px $bodyPadding1 6px;

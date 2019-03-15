@@ -1,6 +1,8 @@
 .torque-floor-plans {
   .torque-floor-plans-thumbnail {
     img {
+      width: 90%;
+      height: auto;
       padding: 30px $bodyPadding1;
       box-sizing: border-box;
     }

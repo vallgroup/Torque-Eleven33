@@ -27,7 +27,8 @@
 
       .list-block-item:not(:last-child) {
         position: relative;
-        margin-bottom: 9px;
+        padding-bottom: 12px;
+        margin-bottom: 22px;
 
         &::after {
           content: "";
