@@ -61,8 +61,9 @@ if ( have_rows( $modules ) ):
 
         $title = get_sub_field( 'title' );
         $description = get_sub_field( 'description' );
+        $list_blocks = get_sub_field('list_blocks');
 
-        include locate_template('/parts/acf/modules/list-blocks.php');
+        include locate_template('/parts/acf/modules/list-blocks/list-blocks.php');
 
         break;
     }
