@@ -48,6 +48,15 @@ if ( class_exists( 'E33_Customizer' ) ) {
   }
 
 
+  /**
+ * Slideshow plugin settings
+ */
+
+ if ( class_exists( 'Torque_Slideshow' ) ) {
+   add_filter( Torque_Slideshow::$USE_POST_SLIDESHOW_FILTER_HOOK, function() { return true; });
+ }
+
+
 /**
 * Floor Plan Plugin Settings
 */
