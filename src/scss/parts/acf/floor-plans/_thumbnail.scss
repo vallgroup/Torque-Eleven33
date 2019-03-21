@@ -1,4 +1,14 @@
 .torque-floor-plans {
+  .floor-plans-loader {
+    padding: 30px;
+    text-align: center;
+
+    svg path,
+    svg rect {
+      fill: $mustard;
+    }
+  }
+
   .torque-floor-plans-thumbnail {
     img {
       width: 90%;
@@ -30,10 +40,6 @@
           width: 32%;
         }
 
-        @include respond-to(desktop) {
-          margin-bottom: 0px;
-        }
-
         .title {
           font-weight: bold;
         }
@@ -62,6 +68,53 @@
             width: 100%;
             height: 100%;
             object-fit: contain;
+          }
+        }
+
+        &.floor-plan-units {
+          margin-bottom: 0;
+          padding-left: 20px;
+          padding-right: 20px;
+          width: 100%;
+
+          @include respond-to(tablet) {
+            padding: 40px $bodyPadding2;
+          }
+
+          @include respond-to(desktop) {
+            padding: 30px 40px;
+          }
+
+          .floor-plan-availability-title {
+            padding-bottom: 20px;
+
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+
+            @include respond-to(tablet) {
+              text-align: left;
+            }
+          }
+
+          .floor-plan-unit {
+            display: flex;
+            justify-content: space-between;
+
+            border-top: 2px solid $white;
+            padding: 10px 5px;
+
+            @include respond-to(tablet) {
+              padding: 20px;
+            }
+
+            .foor-plan-unit-floor-plan-name {
+              color: $mustard;
+            }
+
+            .foor-plan-unit-apply-online {
+              text-decoration: underline;
+            }
           }
         }
       }
