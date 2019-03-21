@@ -119,6 +119,8 @@ header#header-style-1 {
     }
 
     &:not(.active) {
+      margin-top: 0;
+
       @extend %mobilePadding;
     }
   }
