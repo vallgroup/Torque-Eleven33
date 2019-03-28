@@ -1,5 +1,10 @@
 .torque-map {
   padding: 10px 0 50px;
+  min-height: 300px;
+
+  button {
+    min-width: auto; /* fix map buttons issue */
+  }
 
   @include respond-to(tablet) {
     padding: 10px $bodyPadding2 85px;
