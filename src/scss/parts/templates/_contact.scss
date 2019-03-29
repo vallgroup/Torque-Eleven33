@@ -7,6 +7,14 @@
     justify-content: space-between;
   }
 
+  pre {
+    width: 100%;
+
+    @include respond-to(desktop) {
+      width: 65%;
+    }
+  }
+
   h1,
   h2,
   h3,
