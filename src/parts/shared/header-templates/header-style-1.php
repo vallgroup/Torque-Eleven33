@@ -24,7 +24,7 @@
 
   <div class="torque-navigation-toggle torque-header-menu-items-mobile">
     <?php get_template_part( 'parts/shared/header-templates/header', 'top-links'); ?>
-    <?php get_template_part( 'parts/shared/header-parts/menu-items/menu-items', 'stacked'); ?>
+    <?php get_template_part( 'parts/shared/header-parts/menu-items/menu-tree', 'stacked'); ?>
   </div>
 
   <?php get_template_part( 'parts/shared/header-templates/header', 'specials-bar'); ?>
