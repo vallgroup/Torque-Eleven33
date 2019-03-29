@@ -71,7 +71,7 @@
         }
       }
 
-      &:nth-child(4n) {
+      &:nth-child(4n + 2) {
         button {
           @extend %orange;
         }
@@ -124,6 +124,18 @@
           padding-left: 20px;
         }
       }
+    }
+  }
+
+  .torque-map-dynamic-infowindow {
+    h5 {
+        font-family: "VisbySlabCF", serif;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 1;
+        color: #323e48;
+        margin-bottom: 0;
+        margin-top: 13px;
     }
   }
 }
