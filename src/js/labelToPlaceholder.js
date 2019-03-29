@@ -1,6 +1,5 @@
 ($ => {
   $(document).ready(() => {
-    console.log('ran')
     const adminBar = $('#wpadminbar');
     if (0 < adminBar.length) {
       $('header.torque-header').css('margin-top', adminBar.height() )
