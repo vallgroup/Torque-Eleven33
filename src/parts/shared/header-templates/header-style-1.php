@@ -16,7 +16,7 @@
       <?php get_template_part( 'parts/shared/header-templates/header', 'top-links'); ?>
 
       <div class="torque-header-menu-items-inline-wrapper">
-        <?php get_template_part( 'parts/shared/header-parts/menu-items/menu-items', 'inline'); ?>
+        <?php get_template_part( 'parts/shared/header-parts/menu-items/menu-tree', 'inline'); ?>
       </div>
     </div>
 
