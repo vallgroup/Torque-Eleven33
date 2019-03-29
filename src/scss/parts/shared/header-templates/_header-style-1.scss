@@ -72,6 +72,51 @@ header#header-style-1 {
         text-align: right;
         height: 50%;
 
+        .torque-menu-item-wrapper.parent {
+          position: relative;
+          padding-right: 20px;
+          background-image: url('/wp-content/themes/torque-eleven33/statics/images/dropdownarrow.png');
+          background-repeat: no-repeat;
+          background-position: right center;
+          background-size: 15px;
+
+          .torque-menu-item-children-wrapper {
+            position: absolute;
+            top: 100%;
+            left: -25%;
+            width: 200px;
+            background-color: $pale_85;
+            padding: 10px;
+            box-sizing: border-box;
+
+            transition: opacity .4s ease-in-out;
+            visibility: hidden;
+            opacity: 0;
+
+            z-index: 99;
+
+            box-shadow: 0 0 1px #ccc;
+
+            .torque-menu-item-wrapper {
+              display: block;
+              text-align: left;
+            }
+          }
+
+          &:hover {
+            .torque-menu-item-children-wrapper {
+              top: 100%;
+              visibility: visible;
+              opacity: 1;
+
+              .torque-menu-item-wrapper {
+                display: block;
+                text-align: left;
+              }
+            }
+          }
+        }
+
         .torque-menu-item {
           padding-left: 10px;
         }
