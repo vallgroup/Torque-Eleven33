@@ -127,8 +127,9 @@
     }
   }
 
+  .torque-map-infowindow,
   .torque-map-dynamic-infowindow {
-    h5 {
+    h3,h5 {
         font-family: "VisbySlabCF", serif;
         font-size: 18px;
         font-weight: 600;
