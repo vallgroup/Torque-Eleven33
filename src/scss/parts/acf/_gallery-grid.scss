@@ -54,6 +54,11 @@
      */
 
     @include respond-to(tablet) {
+      // padding must respond to tablet
+      .grid-image {
+        padding-top: 0;
+      }
+
       @include respond-to-max(desktop) {
         margin: 0 -1vw;
         display: flex;
@@ -63,8 +68,6 @@
           margin: 1vw;
           width: auto;
           height: 400px;
-
-          padding-top: 0;
 
           img {
             position: relative;
