@@ -7,6 +7,8 @@ if( have_rows('images') ) {
     $caption = $image['caption'];
     $src = $image['url'];
 
+    $iframe_src_url = get_sub_field('iframe_src_url');
+
     $col_start = get_sub_field('column_start');
     $col_end = get_sub_field('column_end');
     $row_start = get_sub_field('row_start');
@@ -23,12 +25,27 @@ if( have_rows('images') ) {
       grid-width-<?php echo $width; ?>
       grid-height-<?php echo $height; ?>
     ">
+      
+      <?php if ($iframe_src_url ) { ?>
+        <?php 
+          /* Open the iFrame container */
+          echo '<a class="iframe-lightbox-link" href="' . $iframe_src_url . '">'
+        ?>
+      <?php } ?>
+
       <img src="<?php echo $src; ?>" />
 
       <?php if ($caption) { ?>
         <div class="caption-overlay">
           <?php echo $caption; ?>
         </div>
+      <?php } ?>
+      
+      <?php if ($iframe_src_url ) { ?>
+        <?php 
+          /* Close the iFrame container */
+          echo '</a>'; 
+        ?>
       <?php } ?>
     </div>
 

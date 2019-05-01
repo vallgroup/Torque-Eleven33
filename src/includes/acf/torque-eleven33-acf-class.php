@@ -9,7 +9,7 @@ class E33_ACF {
     add_action('acf/init', array( $this, 'acf_init' ) );
 
     // hide acf in admin - client doesnt need to see this
-    add_filter('acf/settings/show_admin', '__return_false');
+    add_filter('acf/settings/show_admin', '__return_true');
 
     // add acf fields to wp search
     if ( class_exists( 'Torque_ACF_Search' ) ) {
@@ -274,7 +274,7 @@ class E33_ACF {
        								'id' => '',
        							),
        							'choices' => array(
-                      'left' => 'Left',
+                      			'left' => 'Left',
        								'centre' => 'Centre',
        								'right' => 'Right',
        							),
@@ -473,6 +473,25 @@ class E33_ACF {
        									'max_height' => '',
        									'max_size' => '',
        									'mime_types' => '',
+       								),
+       								array(
+       									'key' => 'field_5cc8a47395421',
+       									'label' => 'iFrame Source URL',
+       									'name' => 'iframe_src_url',
+       									'type' => 'text',
+       									'instructions' => 'Paste iFrame source URL here, to display the iFrame within the Lightbox.',
+       									'required' => 0,
+       									'conditional_logic' => 0,
+       									'wrapper' => array(
+       										'width' => '',
+       										'class' => '',
+       										'id' => '',
+       									),
+											 'default_value' => '',
+											 'placeholder' => 'http://myiframeurl.com/',
+											 'prepend' => '',
+											 'append' => '',
+											 'maxlength' => '',
        								),
        								array(
        									'key' => 'field_5c86a00f3ec15',
