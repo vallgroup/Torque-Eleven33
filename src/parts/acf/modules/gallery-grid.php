@@ -29,7 +29,7 @@ if( have_rows('images') ) {
       <?php if ($iframe_src_url ) { ?>
         <?php 
           /* Open the iFrame container */
-          echo '<a class="iframe-lightbox-link" href="' . $iframe_src_url . '">'
+          echo '<a class="iframe-lightbox-link" href="' . $iframe_src_url . '" title="Open Virtual Tour">'
         ?>
       <?php } ?>
 
