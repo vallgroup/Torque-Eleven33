@@ -142,26 +142,3 @@
     }
   }
 }
-
-.iframe-lightbox {
-  iframe {
-    -webkit-box-shadow: none !important;
-    box-shadow: none !important;
-  }
-  .content {
-    background: #edecea;
-  }
-}
-#iframe-quicklinks-container {
-  .iframe-lightbox-quicklink {
-    margin: 0 20px;
-  }
-  & .iframe-link-current {
-    font-weight: bold;
-  }
-  text-align: center;
-  padding: 18px;
-  background: #edecea;
-  -webkit-box-shadow: 0.267rem 0.267rem 0.267rem 0 rgba(3, 3, 3, 0.3);
-  box-shadow: 0.267rem 0.267rem 0.267rem 0 rgba(3, 3, 3, 0.3);
-}
