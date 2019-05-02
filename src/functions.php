@@ -155,13 +155,25 @@ function torque_enqueue_child_styles() {
 // enqueue child scripts after parent script
 add_action( 'wp_enqueue_scripts', 'torque_enqueue_child_scripts');
 function torque_enqueue_child_scripts() {
-
+    
+    // enqueue child script
     wp_enqueue_script( 'torque-eleven33-script',
         get_stylesheet_directory_uri() . '/bundles/bundle.js',
         array( 'torque-theme-scripts' ), // depends on parent script
         wp_get_theme()->get('Version'),
         true       // put it in the footer
     );
+
 }
+
+// Add ReachEdge tracking script directly to WP head
+function torque_render_reachedge_tracking_code() {
+?>
+  <!-- ReachEdge Tracking Code Start -->
+  <script type="text/javascript" src="//cdn.rlets.com/capture_configs/cc3/fc9/912/e8240739efed46a5d98b78c.js" async="async"></script>
+  <!-- ReachEdge Tracking Code End -->
+<?php
+}
+add_action('wp_head', 'torque_render_reachedge_tracking_code', 0);
 
 ?>
