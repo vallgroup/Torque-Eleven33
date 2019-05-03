@@ -1,23 +1,41 @@
 <?php
 $leasing = get_field('leasing_phone_number', 'options');
+
+$top_links = get_field( 'top_links', 'options' );
+
+$link1 = array(
+  $top_links['link_1_text'],
+  $top_links['link_1_url'],
+);
+
+$link2 = array(
+  $top_links['link_2_text'],
+  $top_links['link_2_url'],
+);
+
+$link3 = array(
+  $top_links['link_3_text'],
+  $top_links['link_3_url'],
+);
+
 ?>
 
 <div class="top-links">
-  <?php if ($leasing) { ?>
-    <div class="top-link leasing">
-      <a href="tel:<?php echo $leasing; ?>" >
-        Leasing <?php echo $leasing; ?>
-      </a>
-    </div>
-  <?php } ?>
+  <div class="top-link leasing">
+    <a href="<?php echo $link1[1]; ?>" >
+      <?php echo $link1[0]; ?>
+    </a>
+  </div>
+
   <div class="top-link">
-    <a href="https://eleven33.residentportal.com/resident_portal/?module=authentication&action=view_login" target="_blank" referrer="noopener noreferrer">
-      Resident Login
+    <a href="<?php echo $link2[1]; ?>" target="_blank" referrer="noopener noreferrer">
+      <?php echo $link2[0]; ?>
     <a>
   </div>
+
   <div class="top-link">
-    <a href="https://eleven33.prospectportal.com/Apartments/module/application_authentication/property[id]/673841/show_in_popup/false/kill_session/1/" target="_blank" referrer="noopener noreferrer">
-      Apply Now
+    <a href="<?php echo $link3[1]; ?>" target="_blank" referrer="noopener noreferrer">
+      <?php echo $link3[0]; ?>
     <a>
   </div>
 </div>
