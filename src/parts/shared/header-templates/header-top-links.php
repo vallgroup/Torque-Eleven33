@@ -4,18 +4,18 @@ $leasing = get_field('leasing_phone_number', 'options');
 $top_links = get_field( 'top_links', 'options' );
 
 $link1 = array(
-  $top_links['link_1_text'],
-  $top_links['link_1_url'],
+  (isset($top_links['link_1_text']) ? $top_links['link_1_text'] : ''),
+  (isset($top_links['link_1_url']) ? $top_links['link_1_url'] : ''),
 );
 
 $link2 = array(
-  $top_links['link_2_text'],
-  $top_links['link_2_url'],
+  (isset($top_links['link_2_text']) ? $top_links['link_2_text'] : ''),
+  (isset($top_links['link_2_url']) ? $top_links['link_2_url'] : ''),
 );
 
 $link3 = array(
-  $top_links['link_3_text'],
-  $top_links['link_3_url'],
+  (isset($top_links['link_3_text']) ? $top_links['link_3_text'] : ''),
+  (isset($top_links['link_3_url']) ? $top_links['link_3_url'] : ''),
 );
 
 ?>
