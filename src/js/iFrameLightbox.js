@@ -26,8 +26,6 @@
                   /* Create a new node for single iFrame quick link, and assign class, href & text content */
                   let iFrameQuicklinkEl = document.createElement("a");
                   /* If the clicked iFrame element's href == the current iFrame quick link's href, add the 'active' class */
-                  console.log('el.href: ' + el.href);
-                  console.log('iFrameElArr[i].getAttribute("href"): ' + iFrameElArr[i].getAttribute("href"));
                   if ( iFrameElArr[i].getAttribute("href") == el.href ) {
                      iFrameQuicklinkEl.className = "iframe-lightbox-quicklink iframe-link-active";
                   } else {
