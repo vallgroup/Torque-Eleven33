@@ -32,7 +32,12 @@
                      iFrameQuicklinkEl.className = "iframe-lightbox-quicklink";
                   }
                   iFrameQuicklinkEl.href = iFrameElArr[i].getAttribute("href");
-                  iFrameQuicklinkEl.textContent = iFrameElArr[i].getElementsByClassName("caption-overlay")[0].textContent.trim();
+                  if ( iFrameElArr[i].getElementsByClassName("caption-overlay")[0] ) {
+                     iFrameQuicklinkEl.textContent = iFrameElArr[i].getElementsByClassName("caption-overlay")[0].textContent.trim();
+                  } else {
+                     let iFrameNum = i + 1;
+                     iFrameQuicklinkEl.textContent = "iFrame #" + iFrameNum;
+                  }
                   /* Append to quick links container */
                   iFrameQuickLinksContainer.appendChild(iFrameQuicklinkEl);
                }
@@ -60,13 +65,27 @@
             },
             /* Set onClosed event listener for main iFrameLightbox instances */
             onClosed: function (el) {
-               /* Remove the quick links entirely, when the lightbox is closed */
-               document.getElementById("iframe-quicklinks-container").remove();
+               /* Remove the quick links entirely (if loaded already), when the lightbox is closed */
+               if (document.body.contains(document.getElementById("iframe-quicklinks-container"))) {
+                  document.getElementById("iframe-quicklinks-container").remove();
+               }
             },
             /* Set iFrameLightbox touch functionality to true */
             touch: true
 			});
 		});
    });
+
+   /**
+    * Create Element.remove() function if not exist
+    * NB: Sepcifically for IE10/11...
+    */
+   if (!('remove' in Element.prototype)) {
+      Element.prototype.remove = function() {
+         if (this.parentNode) {
+            this.parentNode.removeChild(this);
+         }
+      };
+   }
 
 })(jQuery);

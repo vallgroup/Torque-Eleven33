@@ -12,8 +12,19 @@
    }
 }
 
+.iframe-lightbox-link {
+   display: block;
+   width: 100%;
+   height: 100%;
+   -o-object-fit: cover;
+   object-fit: cover;
+   -o-object-position: center;
+   object-position: center;
+}
+
 #iframe-quicklinks-container {
    .iframe-lightbox-quicklink {
+      display: inline-block;
       margin: 0 20px;
    }
 

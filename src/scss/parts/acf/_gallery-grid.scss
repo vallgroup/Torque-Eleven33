@@ -4,13 +4,17 @@
   .gallery-grid-root {
     .grid-image {
       position: relative;
-      width: 100%;
+      width: auto;
       height: auto;
-      margin: 1vw 0;
+      margin: 0vw 0;
       padding-top: 54.6%;
       overflow: hidden;
 
-      img {
+      @supports (display: grid) {
+        width: 100%;
+      }
+
+      .grid-image-container {
         position: absolute;
         top: 0;
         left: 0;
@@ -21,6 +25,10 @@
         height: 100%;
         object-fit: cover;
         object-position: center;
+
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
       }
 
       .caption-overlay {
@@ -69,7 +77,7 @@
           width: auto;
           height: 400px;
 
-          img {
+          .grid-image-container {
             position: relative;
           }
 
@@ -91,8 +99,11 @@
     @include respond-to(desktop) {
       display: grid;
       grid-template-columns: repeat(12, 1fr);
-      grid-row-gap: 25px;
-      grid-column-gap: 25px;
+
+      @supports (display: grid) {
+        grid-row-gap: 25px;
+        grid-column-gap: 25px;
+      }
 
       @for $i from 1 through 2 {
         &.grid-rows-#{$i} {
@@ -101,6 +112,10 @@
       }
 
       .grid-image {
+        
+        margin-right: 25px;
+        margin-bottom: 25px;
+        
         @for $i from 0 through 11 {
           // possible col start value
           $start: $i + 1;

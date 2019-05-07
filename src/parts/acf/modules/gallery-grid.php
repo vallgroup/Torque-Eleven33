@@ -33,14 +33,16 @@ if( have_rows('images') ) {
         ?>
       <?php } ?>
 
-      <img src="<?php echo $src; ?>" />
+      <div class="grid-image-container" style="background-image: url('<?php echo $src; ?>')">
 
-      <?php if ($caption) { ?>
-        <div class="caption-overlay">
-          <?php echo $caption; ?>
-        </div>
-      <?php } ?>
+        <?php if ($caption) { ?>
+          <div class="caption-overlay">
+            <?php echo $caption; ?>
+          </div>
+        <?php } ?>
       
+      </div>
+
       <?php if ($iframe_src_url ) { ?>
         <?php 
           /* Close the iFrame container */
