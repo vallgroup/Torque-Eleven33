@@ -211,7 +211,7 @@ header#header-style-1 {
   }
 
   .specials-bar {
-    padding: 2px $bodyPadding1 5px;
+    padding: 3px $bodyPadding1 7.5px;
 
     background-color: $mustard;
     color: $white;
@@ -225,7 +225,7 @@ header#header-style-1 {
     }
 
     @include respond-to(desktop) {
-      padding: 0px $bodyPadding1 6px;
+      padding: 3px $bodyPadding1 9px;
     }
   }
 }
