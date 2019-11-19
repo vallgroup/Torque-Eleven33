@@ -26,8 +26,8 @@ header#header-style-1 {
     z-index: 10;
     border-bottom: 3px solid $mustard;
     padding: 0;
-    padding-right: $bodyPadding1;
-    padding-left: $bodyPadding1;
+    padding-right: $bodyPadding0;
+    padding-left: $bodyPadding0;
 
     @include respond-to(tablet) {
       border-bottom: 6px solid $mustard;
@@ -132,8 +132,8 @@ header#header-style-1 {
   %mobilePadding {
     margin-top: $headerHeightMobile;
     padding-top: 30px;
-    padding-right: $bodyPadding2;
-    padding-left: $bodyPadding2;
+    padding-right: $bodyPadding1;
+    padding-left: $bodyPadding1;
     padding-bottom: 35px;
 
     @include respond-to(tablet) {
@@ -211,7 +211,7 @@ header#header-style-1 {
   }
 
   .specials-bar {
-    padding: 3px $bodyPadding1 7.5px;
+    padding: 2px $bodyPadding1 5px;
 
     background-color: $mustard;
     color: $white;
@@ -225,7 +225,7 @@ header#header-style-1 {
     }
 
     @include respond-to(desktop) {
-      padding: 3px $bodyPadding1 9px;
+      padding: 0px $bodyPadding1 6px;
     }
   }
 }
