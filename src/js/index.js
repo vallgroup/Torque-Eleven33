@@ -1,6 +1,7 @@
 import "../scss/main.scss";
 
 import "./labelToPlaceholder";
+import "./headerBar";
 
 /* Imports for iFrame Lightbox library */
 import "iframe-lightbox";
