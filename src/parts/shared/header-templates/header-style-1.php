@@ -1,3 +1,12 @@
+<?php
+  // Add GTag code, as per client. Approved by Irini Boeder.
+  // - MV
+?>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MDTQ4LC"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
 <header
   id="header-style-1"
   class="torque-header">

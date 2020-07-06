@@ -155,7 +155,7 @@ function torque_enqueue_child_styles() {
 // enqueue child scripts after parent script
 add_action( 'wp_enqueue_scripts', 'torque_enqueue_child_scripts');
 function torque_enqueue_child_scripts() {
-    
+
     // enqueue child script
     wp_enqueue_script( 'torque-eleven33-script',
         get_stylesheet_directory_uri() . '/bundles/bundle.js',
@@ -172,6 +172,18 @@ function torque_render_reachedge_tracking_code() {
   <!-- ReachEdge Tracking Code Start -->
   <script type="text/javascript" src="//cdn.rlets.com/capture_configs/cc3/fc9/912/e8240739efed46a5d98b78c.js" async="async"></script>
   <!-- ReachEdge Tracking Code End -->
+
+  <!-- Google Tag Manager -->
+  <?php
+    // Add GTag code, as per client. Approved by Irini Boeder.
+    // - MV
+  ?>
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-MDTQ4LC');</script>
+  <!-- End Google Tag Manager -->
 <?php
 }
 add_action('wp_head', 'torque_render_reachedge_tracking_code', 0);
