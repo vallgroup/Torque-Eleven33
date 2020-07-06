@@ -1,15 +1,15 @@
 %imageSize {
-  padding-bottom: 80%;
+  padding-bottom: 90%;
 
   @include respond-to(desktop) {
-    padding-bottom: 55%;
+    padding-bottom: 55% !important;
   }
 }
 
 .page-hero {
   position: relative;
 
-  .tq-slideshow {
+  span > .tq-slideshow {
     @extend %imageSize;
 
     .tq-slideshow-arrow {
